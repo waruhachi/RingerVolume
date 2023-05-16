@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,7 @@
 		B64505D8256946320096F783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64505D6256946320096F783 /* LaunchScreen.storyboard */; };
 		B64505EA256947730096F783 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B64505E9256947730096F783 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
 		B645060C25694DDC0096F783 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645060B25694DDC0096F783 /* IntentHandler.swift */; };
-		B645061025694DDC0096F783 /* RingerVolumeIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B645060925694DDC0096F783 /* RingerVolumeIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B645061025694DDC0096F783 /* RingerVolumeIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B645060925694DDC0096F783 /* RingerVolumeIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B645061625694DEF0096F783 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B64505E9256947730096F783 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
 		B6450736256A8FA40096F783 /* VolumeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B6450734256A8FA40096F783 /* VolumeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6450739256A8FA40096F783 /* VolumeManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6450732256A8FA40096F783 /* VolumeManager.framework */; };
@@ -50,15 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B64505FE25694D5E0096F783 /* Embed App Extensions */ = {
+		B64505FE25694D5E0096F783 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B645061025694DDC0096F783 /* RingerVolumeIntents.appex in Embed App Extensions */,
+				B645061025694DDC0096F783 /* RingerVolumeIntents.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B6450657256964710096F783 /* Embed Frameworks */ = {
@@ -214,7 +214,7 @@
 				B64505C4256946300096F783 /* Sources */,
 				B64505C5256946300096F783 /* Frameworks */,
 				B64505C6256946300096F783 /* Resources */,
-				B64505FE25694D5E0096F783 /* Embed App Extensions */,
+				B64505FE25694D5E0096F783 /* Embed Foundation Extensions */,
 				B6450657256964710096F783 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -271,8 +271,9 @@
 		B64505C0256946300096F783 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					B64505C7256946300096F783 = {
 						CreatedOnToolsVersion = 12.2;
@@ -607,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -614,6 +616,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = VolumeManager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -621,6 +624,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genjiapp.VolumeManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -634,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -641,6 +647,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = VolumeManager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -648,6 +655,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genjiapp.VolumeManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
