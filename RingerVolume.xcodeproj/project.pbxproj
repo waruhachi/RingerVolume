@@ -104,8 +104,8 @@
 		B6450735256A8FA40096F783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6688520256B7F2400D07ECA /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		B6688521256B80A100D07ECA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B6688523256B81C000D07ECA /* screenshot_app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_app.png; sourceTree = "<group>"; };
-		B6688524256B81C000D07ECA /* screenshot_shortcuts_action.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_shortcuts_action.png; sourceTree = "<group>"; };
+		B6B6917E2A1376B600B5A347 /* ringervolume_app.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ringervolume_app.gif; sourceTree = "<group>"; };
+		B6B6917F2A1376B600B5A347 /* ringervolume_shortcuts.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ringervolume_shortcuts.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +140,8 @@
 			children = (
 				B6688520256B7F2400D07ECA /* LICENSE.txt */,
 				B6688521256B80A100D07ECA /* README.md */,
-				B6688523256B81C000D07ECA /* screenshot_app.png */,
-				B6688524256B81C000D07ECA /* screenshot_shortcuts_action.png */,
+				B6B6917E2A1376B600B5A347 /* ringervolume_app.gif */,
+				B6B6917F2A1376B600B5A347 /* ringervolume_shortcuts.gif */,
 				B64505CA256946300096F783 /* RingerVolume */,
 				B645060A25694DDC0096F783 /* RingerVolumeIntents */,
 				B6450733256A8FA40096F783 /* VolumeManager */,
