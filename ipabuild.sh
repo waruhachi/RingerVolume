@@ -33,14 +33,11 @@ if [ -e "$TARGET_APP/embedded.mobileprovision" ]; then
     rm -rf "$TARGET_APP/embedded.mobileprovision"
 fi
 
-# Add entitlements
-# echo "Adding entitlements"
-# chmod a+x $WORKING_LOCATION/bin/ldid
-# $WORKING_LOCATION/bin/ldid -S"$WORKING_LOCATION/entitlements.plist" "$TARGET_APP/$APPLICATION_NAME"
-
 mkdir Payload
 cp -r RingerVolume.app Payload/RingerVolume.app
 strip Payload/RingerVolume.app/RingerVolume
 zip -vr RingerVolume.ipa Payload
 rm -rf RingerVolume.app
 rm -rf Payload
+
+# Credit to https://github.com/leminlimez/Cowabunga
