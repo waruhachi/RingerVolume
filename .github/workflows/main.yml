@@ -1,0 +1,30 @@
+name: Build IPA
+
+on:
+  push:
+    branches: [ "**" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      
+    - name: Set execute permission for ipabuild.sh
+      run: chmod +x ./ipabuild.sh
+      
+    - name: Make IPA
+      run: ./ipabuild.sh
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: release
+        name: RingerVolume
+        files: build/RingerVolume.ipa
+        draft: false
+        prerelease: false
+        make_latest: true
